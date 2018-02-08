@@ -5,7 +5,6 @@ module TodoDsl
     end
 
     def add(item)
-      Kernel.puts "Cli::add"
       todo_command "add #{item}"
     end
 
@@ -38,7 +37,6 @@ module TodoDsl
     end
 
     def add(description)
-      Kernel.puts "Domain::add"
       Todo::UseCases::AddTodos.new(todo_repo: todo_repo).add(description: description)
     end
 

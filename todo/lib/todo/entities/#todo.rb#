@@ -9,6 +9,7 @@ module Todo
       end
 
       def valid?
+        Kernel.puts "Todo::entities valid?"
         failed_validations.empty?
       end
 

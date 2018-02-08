@@ -36,7 +36,6 @@ module Todo
         end
 
         def execute
-          Kernel.puts "Todo:: execute"
           create_todo
 
           if valid?
@@ -56,7 +55,6 @@ module Todo
         )
 
         def create_todo
-          Kernel.puts "Todo::create_todo"
           @todo = Todo::Entities::Todo.new(attributes)
         end
 
@@ -65,12 +63,10 @@ module Todo
         end
 
         def persist
-          Kernel.puts "Todo persist"
           todo_repo.create(todo)
         end
 
         def notify_of_success
-          Kernel.puts "Todo notify success"
           observer.use_case_succeeded
         end
 

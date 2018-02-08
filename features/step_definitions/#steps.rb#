@@ -56,6 +56,7 @@ module TodoDsl
 
     private
     def todo_repo
+      Kernel.puts "todo repo"
       @todo_repo ||= begin
         require_relative "../../todo/spec/doubles/in_memory_todo_repo"
         InMemoryTodoRepo.new

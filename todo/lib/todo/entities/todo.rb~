@@ -4,7 +4,6 @@ module Todo
       attr_reader :description
 
       def initialize(description: nil)
-        Kernel.puts "Todo::entities initialize"
         @description = description
       end
 
